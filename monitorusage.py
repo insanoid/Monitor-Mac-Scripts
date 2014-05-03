@@ -30,7 +30,6 @@ response = requests.post(url,
                          files={'screenshot': open(current_screen_filename,'rb'),
                                 'camera'    : open(current_camera_filename,'rb')})
 
-print(str(response.json)+" - "+response.text)
 resonse_JSON_object = response.json()
 if resonse_JSON_object['success']==True:
     print('Request Successful')
